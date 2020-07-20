@@ -1,2 +1,2 @@
-# coursera-test
+# coursera-submission1
 Coursera Test Repository
