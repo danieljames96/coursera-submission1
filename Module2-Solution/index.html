@@ -10,21 +10,18 @@
   box-sizing: border-box;
 }
 h1 {
+  text-align: center;
   margin-bottom: 15px;
+  font-size: 175%;
 }
 
 p {
   border: 1px solid black;
-  background-color: grey;
-  width: 90%;
-  height: 150px;
-  margin-right: auto;
-  margin-left: auto;
   font-family: Helvetica;
   color: black;
 }
 
-.row {
+.item {
   width: 100%;
 }
 
@@ -32,7 +29,7 @@ p {
 @media (min-width: 992px) {
   .col-lg-4{
     float: left;
-    border: 1px solid green;
+    position: relative;
     width: 33.33%;
   }
   
@@ -42,7 +39,7 @@ p {
 @media (min-width: 768px) and (max-width: 991px) {
   .col-md-6, .col-md-12 {
     float: left;
-    border: 1px solid green;
+    position: relative;
   }
   
   .col-md-6 {
@@ -54,20 +51,40 @@ p {
   }
 }
 
+/********** Mobile **********/
+@media (max-width: 767px) {
+  .col-sm-12 {
+    float: left;
+    width: 100%;
+  }
+}
+
+.p1 {
+  float: right;
+  background-color: white;
+  text-align:right;
+  font-size: 125%;
+  margin-right: 0;
+  margin-top: 0;
+}
+
+.p2 {
+  width: 90%;
+  height: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: grey;
+}
+
 </style>
 </head>
 <body>
-<h1>Responsive Layout</h1>
+<h1>Our Menu</h1>
 
-<div class="row">
-  <div class="col-lg-3 col-md-6"><p>Item 1</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 2</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 3</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 4</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 5</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 6</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 7</p></div>
-  <div class="col-lg-3 col-md-6"><p>Item 8</p></div>
+<div class="item">
+  <div class="col-lg-4 col-md-6 col-sm-12"><p class="p1">Chicken</p><p class="p2">Item 1</p></div>
+  <div class="col-lg-4 col-md-6 col-sm-12"><p class="p1">Beef</p><p class="p2">Item 2</p></div>
+  <div class="col-lg-4 col-md-12 col-sm-12"><p class="p1">Sushi</p><p class="p2">Item 3</p></div>
 </div>
 
 </body>
